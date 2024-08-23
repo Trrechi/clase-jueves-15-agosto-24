@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase sobre Algoritmos de Búsqueda e Inteligencia Artificial</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e0f7fa;
+        }
+        h1 {
+            color: #00796b;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="my-4">Clase sobre Algoritmos de Búsqueda e Inteligencia Artificial</h1>
+        <p class="lead">
+            Hoy en clase discutimos sobre algunos conceptos fascinantes relacionados con la inteligencia artificial, con un enfoque especial en los algoritmos de búsqueda. Se mencionó a Alan Turing, un pionero en la computación, quien descifró códigos durante la Segunda Guerra Mundial y planteó ideas fundamentales sobre la inteligencia artificial.
+        </p>
+        <p class="lead">
+            Turing decía que cuando una máquina pudiera engañar a un humano para que pensara que estaba hablando con otra persona, entonces habríamos alcanzado un nuevo nivel en la inteligencia artificial. Sin embargo, se debatió que aunque la IA pueda aprender y simular comportamientos, su creatividad no sería genuina como la humana.
+        </p>
+        <p class="lead">
+            Además, discutimos sobre dos métodos de algoritmos de búsqueda:
+        </p>
+        <ul class="list-unstyled">
+            <li><strong>FIFO (First In, First Out):</strong> Este método implica que el primer elemento en entrar es el primero en salir, lo que es útil en estructuras de datos como colas.</li>
+            <li><strong>DFS (Depth-First Search):</strong> Este algoritmo explora un grafo o árbol hasta llegar a un nodo final, retrocediendo y explorando otros caminos si es necesario.</li>
+        </ul>
+        <p class="lead">
+            Estos conceptos son esenciales para entender cómo los sistemas inteligentes pueden buscar y procesar información de manera eficiente.
+        </p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
