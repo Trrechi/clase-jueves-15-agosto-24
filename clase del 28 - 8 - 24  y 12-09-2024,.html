@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 29-08-2024</title>
-    <title>        y </title>
-    <title>Clase 12-09-2024</title>
+    <title>Clase 29-08-2024 y 12-09-2024</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -41,15 +39,70 @@
         a:hover {
             background-color: #0056b3;
         }
+        .accordion-button {
+            background-color: #007bff;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div class="container text-center">
-        <h1 class="mb-4">Clase 29-08-2024</h1>
+        <h1 class="mb-4">Clases del 29-08-2024 y 12-09-2024</h1>
         <p class="lead">
             Haz clic en el siguiente botón para acceder al enlace de la clase en Google Colab:
         </p>
-        <a href="https://colab.research.google.com/drive/149ps4b_Zd3X3z_KPOlStduflWayIogij?usp=sharing" target="_blank">Ir a la clase</a>
+        <a href="https://colab.research.google.com/drive/149ps4b_Zd3X3z_KPOlStduflWayIogij?usp=sharing" target="_blank">Ir a la clase del 29-08-2024</a>
+        
+        <div class="mt-5">
+            <h2>Clase del 12-09-2024</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Resumen de la clase sobre redes neuronales y TensorFlow
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            En la clase del 12-09-2024, discutimos cómo funcionan las redes neuronales y su aplicación en el aprendizaje automático usando TensorFlow. Hicimos un modelo para convertir temperaturas de Celsius a Fahrenheit usando capas densas. El modelo se entrenó con una pequeña cantidad de datos y se ajustó usando el optimizador Adam. Además, visualizamos la magnitud de la pérdida a lo largo de las épocas de entrenamiento.
+                            <br><br>
+                            El código usado fue el siguiente:
+                            <pre>
+import tensorflow as tf
+import numpy as np
+
+celsius = np.array([-40, -10, 0, 8, 15, 22, 38], dtype=float)
+fahrenheit = np.array([-40, 14, 32, 46, 59, 72, 100], dtype=float)
+
+# Definir el modelo con capas ocultas y una capa de salida
+oculta1 = tf.keras.layers.Dense(units=3, input_shape=[1])
+oculta2 = tf.keras.layers.Dense(units=3)
+salida = tf.keras.layers.Dense(units=1)
+
+modelo = tf.keras.Sequential([oculta1, oculta2, salida])
+
+# Compilar el modelo
+modelo.compile(
+    optimizer=tf.keras.optimizers.Adam(0.1),
+    loss='mean_squared_error'
+)
+
+# Entrenar el modelo
+historial = modelo.fit(celsius, fahrenheit, epochs=1000, verbose=False)
+
+# Visualizar la pérdida
+import matplotlib.pyplot as plt
+plt.plot(historial.history['loss'])
+plt.xlabel('Época')
+plt.ylabel('Magnitud de pérdida')
+plt.show()
+                            </pre>
+                            Durante el entrenamiento, se observó que la pérdida disminuía con cada época, lo que indicaba que el modelo estaba mejorando su precisión.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
